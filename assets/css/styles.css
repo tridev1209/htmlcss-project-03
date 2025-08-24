@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --header-bg: #10375c;
+}
 html {
     font-size: 62.5%;
 }
@@ -9,6 +12,33 @@ body {
     font-family: "Sora", sans-serif;
 }
 /* Common */
+a {
+    text-decoration: none;
+}
+.btn {
+    --height: 60px;
+    display: inline-block;
+    height: var(--height);
+    min-width: 205px;
+    padding: 0 20px;
+    border-radius: 999px;
+    border: 1px solid #2e80ce;
+    background: #2e80ce;
+    color: #fff;
+    text-align: center;
+    line-height: var(--height);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.btn :hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
 .line-clamp {
     display: -webkit-box;
     -webkit-line-clamp: var(--line-clamp, 1);
@@ -20,4 +50,91 @@ body {
 }
 .break-all {
     word-break: break-all;
+}
+/* Header */
+.header {
+    padding-top: 30px;
+    min-height: 100vh;
+    background: var(--header-bg);
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: inline-flex;
+    justify-content: flex-start;
+    position: relative;
+    font-size: 0.625em;
+}
+.logo__circle::before,
+.logo__circle::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+}
+.logo__circle::before {
+    width: 3em;
+    height: 3em;
+    background: #2e80ce;
+}
+.logo__circle::after {
+    position: absolute;
+    top: 1.1em;
+    left: 1.1em;
+    width: 1.6em;
+    height: 1.6em;
+    background: #ffffff;
+}
+.logo__text {
+    text-align: right;
+    margin-left: 0.6em;
+    color: #fff;
+    line-height: 1.6em;
+}
+.logo__brand {
+    display: block;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+.logo__brand--small {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+/* navbar */
+.navbar__list {
+    display: flex;
+}
+.navbar__link,
+.action__login {
+    padding: 4px 21px;
+    color: #c9d2da;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
+}
+.navbar__link:hover {
+    font-weight: 400;
+    color: #fff;
+}
+.navbar__link--active {
+    text-shadow: 1px 0 0 currentColor;
+    color: #fff;
+}
+.navbar__link--active::before {
+    position: relative;
+    left: -8px;
+    top: -2px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+}
+.action__signup {
+    --height: 44px;
+    margin-left: 7px;
+    min-width: 104px;
 }
