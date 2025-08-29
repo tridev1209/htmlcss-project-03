@@ -34,6 +34,14 @@ a {
     opacity: 0.9;
     cursor: pointer;
 }
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .container {
     width: 1170px;
     max-width: calc(100% - 48px);
@@ -135,10 +143,12 @@ a {
 }
 .logo__brand {
     display: block;
+    font-family: Sora, sans-serif;
     font-size: 1.8em;
     font-weight: 400;
 }
 .logo__brand--small {
+    font-family: Sora, sans-serif;
     font-size: 1.2em;
     font-weight: 300;
 }
@@ -587,4 +597,101 @@ a {
 }
 .appointmen__btn {
     font-size: 1.8rem;
+}
+/* Footer */
+.footer {
+    font-family: "Open Sans", sans-serif;
+    padding: 100px 0 42px;
+    background: #10375c;
+}
+.footer__row {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+}
+.footer__desc {
+    margin-top: 20px;
+    max-width: 336px;
+    color: #a9b3bb;
+    font-size: 1.6rem;
+    line-height: 1.75; /* 175% */
+}
+.footer__heading {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+.footer__list {
+    margin-bottom: 28px;
+}
+.footer__item {
+    margin-bottom: 10px;
+}
+.footer__link {
+    color: #a9b3bb;
+    font-size: 1.4rem;
+    line-height: 1.86px; /* 185.714% */
+    white-space: nowrap;
+}
+.footer__link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer__social {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 28px;
+}
+.footer__social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #2e80ce;
+    background: #fff;
+    border-radius: 50%;
+}
+.footer__social-btn:hover {
+    background: #2e80ce;
+    color: #fff;
+}
+.footer-form {
+    display: flex;
+    margin-top: 10px;
+    column-gap: 12px;
+}
+.footer-form__input {
+    padding: 0 10px;
+    width: 212px;
+    height: 46px;
+    outline: none;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #406181;
+    background: transparent;
+}
+.footer-form__input::placeholder {
+    color: #9ca8b1;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
+.footer-form__submit {
+    --height: 46px;
+
+    min-width: 108px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+.footer__copyright {
+    border-top: 1px solid #406181;
+}
+.footer__copyright-text {
+    margin-top: 28px;
+    color: #aab3ba;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
 }
